@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSimDocument Version="40500">
+	<Model name="Kukaiiwa7_IMUs">
+		<!--List of components that this component owns and serializes.-->
+		<components>
+			<TableReporter__Vec3_ name="reporter">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.01</report_time_interval>
+				<!--Paths to outputs (channels) to satisfy the list Input 'inputs' of type InputT (description: Variable list of quantities to be reported.). To specify multiple paths, put spaces between them.-->
+				<input_inputs>/bodyset/link_1/FirstIMU|linear_acceleration(IMU1_lin_acc) /bodyset/link_1/FirstIMU|angular_velocity(IMU1_ang_vel) /bodyset/link_2/SecondIMU|linear_acceleration(IMU2_lin_acc) /bodyset/link_2/SecondIMU|angular_velocity(IMU2_ang_vel) /bodyset/link_3/ThirdIMU|linear_acceleration(IMU3_lin_acc) /bodyset/link_3/ThirdIMU|angular_velocity(IMU3_ang_vel) /bodyset/link_4/FourthIMU|linear_acceleration(IMU4_lin_acc) /bodyset/link_4/FourthIMU|angular_velocity(IMU4_ang_vel) /bodyset/link_5/FifthIMU|linear_acceleration(IMU5_lin_acc) /bodyset/link_5/FifthIMU|angular_velocity(IMU5_ang_vel) /bodyset/link_6/SixthIMU|linear_acceleration(IMU6_lin_acc) /bodyset/link_6/SixthIMU|angular_velocity(IMU6_ang_vel)</input_inputs>
+			</TableReporter__Vec3_>
+		</components>
+		<!--The model's ground reference frame.-->
+		<Ground name="ground">
+			<!--The geometry used to display the axes of this Frame.-->
+			<FrameGeometry name="frame_geometry">
+				<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+				<socket_frame>..</socket_frame>
+				<!--Scale factors in X, Y, Z directions respectively.-->
+				<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+			</FrameGeometry>
+		</Ground>
+		<!--Acceleration due to gravity, expressed in ground.-->
+		<gravity>0 -9.8100000000000005 0</gravity>
+		<!--Credits (e.g., model author names) associated with the model.-->
+		<credits>de Kanter, D. License: Creative Commons (CCBY 3.0). You are free to distribute, remix, tweak, and build upon this work, even commercially, as long as you credit us for the original creation. http://creativecommons.org/licenses/by/3.0/</credits>
+		<!--Publications and references associated with the model.-->
+		<publications></publications>
+		<!--Units for all lengths.-->
+		<length_units>meters</length_units>
+		<!--Units for all forces.-->
+		<force_units>N</force_units>
+		<!--List of bodies that make up this model.-->
+		<BodySet name="bodyset">
+			<objects>
+				<Body name="link_0">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_0_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_0_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_0.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>5</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>-0.10000000000000001 0 0.070000000000000007</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.050000000000000003 0.059999999999999998 0.029999999999999999 0 0 0</inertia>
+				</Body>
+				<Body name="link_1">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_1_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_1_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_1.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.0074999999999999997</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="IMU1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="IMU1_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.5 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.02 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.0057505300268950298 -0.11740582412858347 0.14404603754627418</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>1.7853193402168031 -0.026453572386925275 1.5831577332059081</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="FirstIMU">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.0057505300000000002 -0.117406 0.14404600000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>1.78532 -0.026453600000000001 1.5831599999999999</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>4.5986468574165222</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 -0.024676184738369154 0.11256509143526994</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.0015405336724518186 0.0015339392831427163 0.00011544156806573063 0 0 0</inertia>
+				</Body>
+				<Body name="link_2">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_2_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_2_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_2_1.stl</mesh_file>
+								</Mesh>
+								<Mesh name="link_2_geom_2">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.88627451658248901 0.49411764740943909 0.086274512112140656</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_2_2.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="IMU2">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="IMU2_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.5 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.02 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.011211708618149354 0.067515759542632559 0.1192009822676502</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.29561006148617502 0.058505851191944215 1.6320048418528936</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="SecondIMU">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.0112117 0.067515800000000001 0.119201</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.29560999999999998 0.0585059 1.6319999999999999</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>3.5003549508670275</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.039599783134882993 0.049268510826621155</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.054588541703650392 0.035054676014289056 0.088874608563945551 0.043307694980669602 0.0033522292216637052 -0.0041899772841725016</inertia>
+				</Body>
+				<Body name="link_3">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_3_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_3_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_3.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 -0.025999999999999999</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="IMU3">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="IMU3_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.5 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.02 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.010703172593232719 0.1230293408053752 0.12441875745848896</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.8830591396734886 -0.045532333289804279 -1.5769905527023549</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="ThirdIMU">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0107032 0.123029 0.124419</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.88306 -0.045532299999999998 -1.5769899999999999</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>5.5434169827444633</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.020920171106264145 0.12460046763091255</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.025155262817787693 0.028123493208971669 0.0061513513253471279 -0.0026406408201733221 -0.010325308374851539 -0.0060329913487789204</inertia>
+				</Body>
+				<Body name="link_4">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_4_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_4_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_4_1.stl</mesh_file>
+								</Mesh>
+								<Mesh name="link_4_geom_2">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.88627451658248901 0.49411764740943909 0.086274512112140656</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_4_2.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="IMU4">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="IMU4_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.5 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.02 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.007291721216628742 0.075787665072701849 0.10444013751048799</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.34397300104255385 -0.035080545022508222 1.6187396746889815</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="FourthIMU">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.0072917199999999998 0.0757877 0.10444000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.34397299999999997 -0.035080500000000001 1.6187400000000001</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>2.5074459160534466</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.039495617240645577 0.049218320747422314</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.00010875077748310408 0.00041708341966881896 0.00044495852743601491 -7.9900429580864469e-05 -8.3514233862279629e-06 1.3497232000125631e-05</inertia>
+				</Body>
+				<Body name="link_5">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_5_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_5_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_5.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 -0.025999999999999999</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="IMU5">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="IMU5_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.5 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.02 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0022885553765181121 0.097268989369919151 0.18110547004178756</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.5058336308188964 0.080325863740713918 -1.6268933921953797</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="FifthIMU">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0022885599999999998 0.097268999999999994 0.18110499999999999</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.50583 0.080325900000000006 -1.6268899999999999</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>1.4270802187662459</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.045266650901785235 0.12742372015959955</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.00048324341511458573 0.00018533804051601552 0.00045541202775909671 5.4713746133683798e-05 -7.3999698044350683e-05 1.0745976812235974e-05</inertia>
+				</Body>
+				<Body name="link_6">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_6_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_6_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_6_1.stl</mesh_file>
+								</Mesh>
+								<Mesh name="link_6_geom_2">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.88627451658248901 0.49411764740943909 0.086274512112140656</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_6_2.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="IMU6">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="IMU6_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.5 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.02 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.0069794222657782092 -0.010215518033635629 0.15276095604016116</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.081292825469485991 -0.020055587401891343 1.5908618653699136</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="SixthIMU">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0.0069794200000000001 -0.010215500000000001 0.15276100000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.081292799999999998 -0.0200556 1.5908599999999999</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>3.2250414547350013</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.0018195509732301834 0.057244864838918393</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.0024914269436448243 0.0024503251143926643 9.9583683706473556e-05 -3.8520734346087882e-05 -0.0002516309615327109 -0.00035641198621926982</inertia>
+				</Body>
+				<Body name="link_7">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="link_7_geom_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Path to an output (channel) to satisfy the one-value Input 'transform' of type SimTK::Transform (description: The transform that positions the Geometry in Ground so it can be positioned. Note, either the Geometry is attached to a Frame OR the input transform can be supplied, but not both. ).-->
+								<input_transform></input_transform>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="link_7_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>1 1 1</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>0.81960785388946533 0.81960785388946533 0.81960785388946533</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>link_7.stl</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 -0.00050000000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--The mass of the body (kg)-->
+					<mass>0.8179828304180603</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 -1.9529844906653559e-06 0.02673624475799781</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.0015074218895580105 0.0015418913503968251 5.3601699305202047e-05 -2.0452362935503347e-05 0.00024716951136906178 0.00011545845886010458</inertia>
+				</Body>
+			</objects>
+			<groups />
+		</BodySet>
+		<!--List of joints that connect the bodies.-->
+		<JointSet name="jointset">
+			<objects>
+				<WeldJoint name="FixedToGround">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>ground_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_0_offset</socket_child_frame>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="ground_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/ground</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.57079632679 0 -1.57079632679</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_0_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_0</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</WeldJoint>
+				<PinJoint name="Revolute0_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_0_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_1_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation0_1">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>1.7162304514374331</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-2.9670597283900002 2.9670597283900002</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_0_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_0</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.14999999999999999</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_1_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_1</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="Revolute1_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_1_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_2_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation1_2">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0.052148070467957025</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-2.09439510239 2.09439510239</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_1_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_1</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.19</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.5708 0 -3.1415899999999999</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_2_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_2</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="Revolute2_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_2_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_3_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation2_3">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0.2012150198205569</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-2.9670597283900002 2.9670597283900002</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_2_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_2</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.20999999999999999 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.5708 0 3.1415899999999999</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_3_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_3</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="Revolute3_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_3_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_4_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation3_4">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>1.7794430938740144</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-2.09439510239 2.09439510239</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_3_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_3</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0.19</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>1.5708 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_4_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_4</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="Revolute4_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_4_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_5_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation4_5">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>-0.49950657898898243</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-2.9670597283900002 2.9670597283900002</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_4_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_4</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.20999999999999999 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.5708 0 3.1415899999999999</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_5_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_5</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="Revolute5_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_5_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_6_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation5_6">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>1.7770925332360588</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-2.09439510239 2.09439510239</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_5_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_5</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.060699999999999997 0.19</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>1.5708 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_6_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_6</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="Revolute6_7">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>link_6_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>link_7_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="Rotation6_7">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-3.0543261909899999 3.0543261909899999</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function>
+								<Constant>
+									<value>0</value>
+								</Constant>
+							</prescribed_function>
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>true</prescribed>
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="link_6_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_6</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.081000000000000003 0.060699999999999997</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.5708 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="link_7_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/link_7</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+			</objects>
+			<groups />
+		</JointSet>
+		<!--Controllers that provide the control inputs for Actuators.-->
+		<ControllerSet name="controllerset">
+			<objects>
+				<PrescribedController name="Brain1">
+					<!--The names of the model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>Rotation0_1</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2">
+					<!--The names of the model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>Rotation1_2</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3">
+					<!--The names of the model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>Rotation2_3</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4">
+					<!--The names of the model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>Rotation3_4</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain5">
+					<!--The names of the model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>Rotation4_5</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain6">
+					<!--The names of the model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>Rotation5_6</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+			</objects>
+			<groups />
+		</ControllerSet>
+		<!--Constraints in the model.-->
+		<ConstraintSet name="constraintset">
+			<objects />
+			<groups />
+		</ConstraintSet>
+		<!--Forces in the model (includes Actuators).-->
+		<ForceSet name="forceset">
+			<objects>
+				<CoordinateActuator name="Rotation0_1">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>Rotation0_1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="Rotation1_2">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>Rotation1_2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="Rotation2_3">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>Rotation2_3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="Rotation3_4">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>Rotation3_4</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="Rotation4_5">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>Rotation4_5</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="Rotation5_6">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>Rotation5_6</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+			</objects>
+			<groups />
+		</ForceSet>
+		<!--Markers in the model.-->
+		<MarkerSet name="markerset">
+			<objects />
+			<groups />
+		</MarkerSet>
+		<!--Geometry to be used in contact forces.-->
+		<ContactGeometrySet name="contactgeometryset">
+			<objects />
+			<groups />
+		</ContactGeometrySet>
+		<!--Probes in the model.-->
+		<ProbeSet name="probeset">
+			<objects />
+			<groups />
+		</ProbeSet>
+		<!--Additional components in the model.-->
+		<ComponentSet name="componentset">
+			<objects />
+			<groups />
+		</ComponentSet>
+	</Model>
+</OpenSimDocument>

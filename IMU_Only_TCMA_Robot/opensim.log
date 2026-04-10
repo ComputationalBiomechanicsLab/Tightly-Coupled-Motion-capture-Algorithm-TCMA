@@ -1,0 +1,379 @@
+[2026-04-07 12:51:20.003] [info] Updating Model file from 40000 to latest format...
+[2026-04-07 12:51:20.007] [info] Loaded model Kukaiiwa7_Markers_IMUs from file Kukaiiwa7_Markers_IMUs.osim
+[2026-04-07 12:51:20.010] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.010] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.388] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.388] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.411] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.411] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.414] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.414] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.415] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.415] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.416] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.416] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.418] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.418] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.419] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.419] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.420] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.420] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.423] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.423] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.427] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.427] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.429] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.429] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.430] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.430] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.456] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.456] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.457] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.457] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.458] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.458] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.458] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.458] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.475] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.475] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.475] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.475] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.476] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.476] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.476] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.476] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.477] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.477] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.477] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.477] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.478] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.478] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.478] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.478] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.479] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.479] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.480] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.480] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.480] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.480] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.480] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.480] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.482] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.482] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.482] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.482] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.483] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.483] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.483] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.483] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.486] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.486] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.487] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.487] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.487] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.487] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.487] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.487] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.559] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.559] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 12:51:20.563] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 12:51:20.563] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.499] [info] Updating Model file from 40000 to latest format...
+[2026-04-07 13:40:51.501] [info] Loaded model Kukaiiwa7_Markers_IMUs from file Kukaiiwa7_Markers_IMUs.osim
+[2026-04-07 13:40:51.503] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.503] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.577] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.577] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.578] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.578] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.578] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.578] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.579] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.579] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.579] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.579] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.580] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.580] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.581] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.581] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.581] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.581] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.582] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.582] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.582] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.582] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.583] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.583] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.583] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.583] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.588] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.588] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.588] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.588] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.589] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.589] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.589] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.589] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.592] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.592] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.592] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.592] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.593] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.593] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.593] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.593] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.594] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.594] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.594] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.594] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.595] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.595] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.595] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.595] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.596] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.596] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.596] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.596] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.596] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.596] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.597] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.597] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.597] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.597] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.597] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.597] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.598] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.598] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.598] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.598] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.599] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.599] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.599] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.599] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.600] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.600] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.601] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.601] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.609] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.609] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-07 13:40:51.611] [info] MarkerSet 'markerset_0' was renamed and is being reset to 'markerset'.
+[2026-04-07 13:40:51.611] [warning] Model 'Kukaiiwa7_Markers_IMUs' has subcomponents with duplicate name 'markerset'. The duplicate is being renamed to 'markerset_0'.
+[2026-04-08 14:30:05.695] [info] Updating Model file from 40000 to latest format...
+[2026-04-08 14:30:05.705] [info] Loaded model Kukaiiwa7_IMUs from file Kukaiiwa7_IMUs.osim
+[2026-04-08 14:40:08.514] [info] Updating Model file from 40000 to latest format...
+[2026-04-08 14:40:08.516] [info] Loaded model Kukaiiwa7_IMUs from file Kukaiiwa7_IMUs.osim
+[2026-04-08 17:14:08.850] [info] Updating Model file from 40000 to latest format...
+[2026-04-08 17:14:08.936] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 17:14:30.990] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_370'.
+[2026-04-08 17:14:31.008] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_370'.
+[2026-04-08 17:14:31.026] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_370'.
+[2026-04-08 17:14:31.061] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_371'.
+[2026-04-08 17:14:31.078] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_371'.
+[2026-04-08 17:14:31.094] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_371'.
+[2026-04-08 17:14:31.126] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_128'.
+[2026-04-08 17:14:31.143] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_128'.
+[2026-04-08 17:14:31.160] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_128'.
+[2026-04-08 17:14:31.168] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_372'.
+[2026-04-08 17:14:31.183] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_329'.
+[2026-04-08 17:14:31.199] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_329'.
+[2026-04-08 17:14:31.215] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_329'.
+[2026-04-08 17:14:31.232] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_32'.
+[2026-04-08 17:14:31.236] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_372'.
+[2026-04-08 17:14:31.251] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_329'.
+[2026-04-08 17:14:31.268] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_329'.
+[2026-04-08 17:14:31.284] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_329'.
+[2026-04-08 17:14:31.302] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_32'.
+[2026-04-08 17:14:31.306] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_372'.
+[2026-04-08 17:14:31.321] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_329'.
+[2026-04-08 17:14:31.338] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_329'.
+[2026-04-08 17:14:31.354] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_329'.
+[2026-04-08 17:14:31.369] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_32'.
+[2026-04-08 17:14:31.385] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_32'.
+[2026-04-08 17:14:31.429] [warning] Model 'triple_pendulum' has subcomponents with duplicate name 'reporter'. The duplicate is being renamed to 'reporter_371'.
+[2026-04-08 17:17:30.001] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 17:17:36.188] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_371'.
+[2026-04-08 17:17:36.206] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_371'.
+[2026-04-08 17:17:36.224] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_371'.
+[2026-04-08 17:17:36.246] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_372'.
+[2026-04-08 17:17:36.263] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_372'.
+[2026-04-08 17:17:36.286] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_372'.
+[2026-04-08 17:17:36.313] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_129'.
+[2026-04-08 17:17:36.331] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_129'.
+[2026-04-08 17:17:36.347] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_129'.
+[2026-04-08 17:17:36.352] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_373'.
+[2026-04-08 17:17:36.367] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_330'.
+[2026-04-08 17:17:36.383] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_330'.
+[2026-04-08 17:17:36.400] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_330'.
+[2026-04-08 17:17:36.416] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_33'.
+[2026-04-08 17:17:36.421] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_373'.
+[2026-04-08 17:17:36.435] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_330'.
+[2026-04-08 17:17:36.452] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_330'.
+[2026-04-08 17:17:36.469] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_330'.
+[2026-04-08 17:17:36.485] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_33'.
+[2026-04-08 17:17:36.490] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_373'.
+[2026-04-08 17:17:36.505] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_330'.
+[2026-04-08 17:17:36.521] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_330'.
+[2026-04-08 17:17:36.536] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_330'.
+[2026-04-08 17:17:36.552] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_33'.
+[2026-04-08 17:17:36.568] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_33'.
+[2026-04-08 17:17:36.595] [warning] Model 'triple_pendulum' has subcomponents with duplicate name 'reporter'. The duplicate is being renamed to 'reporter_372'.
+[2026-04-08 18:02:51.899] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 18:02:59.147] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_372'.
+[2026-04-08 18:02:59.166] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_372'.
+[2026-04-08 18:02:59.188] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_372'.
+[2026-04-08 18:02:59.212] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_373'.
+[2026-04-08 18:02:59.229] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_373'.
+[2026-04-08 18:02:59.246] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_373'.
+[2026-04-08 18:02:59.273] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_130'.
+[2026-04-08 18:02:59.290] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_130'.
+[2026-04-08 18:02:59.307] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_130'.
+[2026-04-08 18:02:59.314] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_374'.
+[2026-04-08 18:02:59.328] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_331'.
+[2026-04-08 18:02:59.346] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_331'.
+[2026-04-08 18:02:59.364] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_331'.
+[2026-04-08 18:02:59.380] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_34'.
+[2026-04-08 18:02:59.385] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_374'.
+[2026-04-08 18:02:59.398] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_331'.
+[2026-04-08 18:02:59.414] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_331'.
+[2026-04-08 18:02:59.429] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_331'.
+[2026-04-08 18:02:59.445] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_34'.
+[2026-04-08 18:02:59.449] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_374'.
+[2026-04-08 18:02:59.464] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_331'.
+[2026-04-08 18:02:59.481] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_331'.
+[2026-04-08 18:02:59.497] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_331'.
+[2026-04-08 18:02:59.513] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_34'.
+[2026-04-08 18:02:59.529] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_34'.
+[2026-04-08 18:02:59.562] [warning] Model 'triple_pendulum' has subcomponents with duplicate name 'reporter'. The duplicate is being renamed to 'reporter_373'.
+[2026-04-08 18:07:37.844] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 18:07:49.923] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_373'.
+[2026-04-08 18:07:49.943] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_373'.
+[2026-04-08 18:07:49.965] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_373'.
+[2026-04-08 18:07:49.991] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_374'.
+[2026-04-08 18:07:50.010] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_374'.
+[2026-04-08 18:07:50.028] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_374'.
+[2026-04-08 18:07:50.055] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_131'.
+[2026-04-08 18:07:50.072] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_131'.
+[2026-04-08 18:07:50.091] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_131'.
+[2026-04-08 18:07:50.098] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_375'.
+[2026-04-08 18:07:50.114] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_332'.
+[2026-04-08 18:07:50.131] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_332'.
+[2026-04-08 18:07:50.148] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_332'.
+[2026-04-08 18:07:50.166] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_35'.
+[2026-04-08 18:07:50.170] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_375'.
+[2026-04-08 18:07:50.186] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_332'.
+[2026-04-08 18:07:50.204] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_332'.
+[2026-04-08 18:07:50.222] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_332'.
+[2026-04-08 18:07:50.242] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_35'.
+[2026-04-08 18:07:50.248] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_375'.
+[2026-04-08 18:07:50.265] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_332'.
+[2026-04-08 18:07:50.286] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_332'.
+[2026-04-08 18:07:50.304] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_332'.
+[2026-04-08 18:07:50.322] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_35'.
+[2026-04-08 18:07:50.340] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_35'.
+[2026-04-08 18:07:50.371] [warning] Model 'triple_pendulum' has subcomponents with duplicate name 'reporter'. The duplicate is being renamed to 'reporter_374'.
+[2026-04-08 18:10:24.463] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 18:10:31.863] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_374'.
+[2026-04-08 18:10:31.898] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_374'.
+[2026-04-08 18:10:31.921] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_374'.
+[2026-04-08 18:10:31.949] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_375'.
+[2026-04-08 18:10:31.970] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_375'.
+[2026-04-08 18:10:31.991] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_375'.
+[2026-04-08 18:10:32.023] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_132'.
+[2026-04-08 18:10:32.044] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_132'.
+[2026-04-08 18:10:32.064] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_132'.
+[2026-04-08 18:10:32.071] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_376'.
+[2026-04-08 18:10:32.088] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_333'.
+[2026-04-08 18:10:32.108] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_333'.
+[2026-04-08 18:10:32.127] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_333'.
+[2026-04-08 18:10:32.147] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_36'.
+[2026-04-08 18:10:32.152] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_376'.
+[2026-04-08 18:10:32.170] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_333'.
+[2026-04-08 18:10:32.190] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_333'.
+[2026-04-08 18:10:32.212] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_333'.
+[2026-04-08 18:10:32.233] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_36'.
+[2026-04-08 18:10:32.238] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_376'.
+[2026-04-08 18:10:32.257] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_333'.
+[2026-04-08 18:10:32.277] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_333'.
+[2026-04-08 18:10:32.297] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_333'.
+[2026-04-08 18:10:32.316] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_36'.
+[2026-04-08 18:10:32.335] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_36'.
+[2026-04-08 18:11:12.172] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 18:11:19.170] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_374'.
+[2026-04-08 18:11:19.192] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_374'.
+[2026-04-08 18:11:19.215] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_374'.
+[2026-04-08 18:11:19.248] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_375'.
+[2026-04-08 18:11:19.274] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_375'.
+[2026-04-08 18:11:19.297] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_375'.
+[2026-04-08 18:11:19.327] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_132'.
+[2026-04-08 18:11:19.347] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_132'.
+[2026-04-08 18:11:19.366] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_132'.
+[2026-04-08 18:11:19.372] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_376'.
+[2026-04-08 18:11:19.389] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_333'.
+[2026-04-08 18:11:19.410] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_333'.
+[2026-04-08 18:11:19.431] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_333'.
+[2026-04-08 18:11:19.453] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_36'.
+[2026-04-08 18:11:19.458] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_376'.
+[2026-04-08 18:11:19.477] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_333'.
+[2026-04-08 18:11:19.497] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_333'.
+[2026-04-08 18:11:19.517] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_333'.
+[2026-04-08 18:11:19.536] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_36'.
+[2026-04-08 18:11:19.541] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_376'.
+[2026-04-08 18:11:19.558] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_333'.
+[2026-04-08 18:11:19.580] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_333'.
+[2026-04-08 18:11:19.600] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_333'.
+[2026-04-08 18:11:19.619] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_36'.
+[2026-04-08 18:11:19.640] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_36'.
+[2026-04-08 18:11:32.183] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 18:11:38.303] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_374'.
+[2026-04-08 18:11:38.326] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_374'.
+[2026-04-08 18:11:38.347] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_374'.
+[2026-04-08 18:11:38.374] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_375'.
+[2026-04-08 18:11:38.398] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_375'.
+[2026-04-08 18:11:38.418] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_375'.
+[2026-04-08 18:11:38.450] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_132'.
+[2026-04-08 18:11:38.471] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_132'.
+[2026-04-08 18:11:38.491] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_132'.
+[2026-04-08 18:11:38.499] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_376'.
+[2026-04-08 18:11:38.516] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_333'.
+[2026-04-08 18:11:38.534] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_333'.
+[2026-04-08 18:11:38.553] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_333'.
+[2026-04-08 18:11:38.573] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_36'.
+[2026-04-08 18:11:38.580] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_376'.
+[2026-04-08 18:11:38.597] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_333'.
+[2026-04-08 18:11:38.617] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_333'.
+[2026-04-08 18:11:38.637] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_333'.
+[2026-04-08 18:11:38.656] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_36'.
+[2026-04-08 18:11:38.663] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_376'.
+[2026-04-08 18:11:38.680] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_333'.
+[2026-04-08 18:11:38.698] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_333'.
+[2026-04-08 18:11:38.720] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_333'.
+[2026-04-08 18:11:38.740] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_36'.
+[2026-04-08 18:11:38.759] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_36'.
+[2026-04-08 18:11:38.801] [warning] Model 'triple_pendulum' has subcomponents with duplicate name 'reporter'. The duplicate is being renamed to 'reporter_375'.
+[2026-04-08 18:16:54.410] [info] Loaded model triple_pendulum from file try.osim
+[2026-04-08 18:17:01.653] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q1'. The duplicate is being renamed to 'q1_375'.
+[2026-04-08 18:17:01.679] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q2'. The duplicate is being renamed to 'q2_375'.
+[2026-04-08 18:17:01.699] [warning] ForceSet 'forceset' has subcomponents with duplicate name 'q3'. The duplicate is being renamed to 'q3_375'.
+[2026-04-08 18:17:01.727] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain2'. The duplicate is being renamed to 'Brain2_376'.
+[2026-04-08 18:17:01.746] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain3'. The duplicate is being renamed to 'Brain3_376'.
+[2026-04-08 18:17:01.764] [warning] ControllerSet 'controllerset' has subcomponents with duplicate name 'Brain4'. The duplicate is being renamed to 'Brain4_376'.
+[2026-04-08 18:17:01.794] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticO'. The duplicate is being renamed to 'StaticO_133'.
+[2026-04-08 18:17:01.813] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticX'. The duplicate is being renamed to 'StaticX_133'.
+[2026-04-08 18:17:01.831] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'StaticY'. The duplicate is being renamed to 'StaticY_133'.
+[2026-04-08 18:17:01.837] [warning] Body 'upper' has subcomponents with duplicate name 'upper_imu'. The duplicate is being renamed to 'upper_imu_377'.
+[2026-04-08 18:17:01.853] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperO'. The duplicate is being renamed to 'UpperO_334'.
+[2026-04-08 18:17:01.871] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperX'. The duplicate is being renamed to 'UpperX_334'.
+[2026-04-08 18:17:01.889] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperY'. The duplicate is being renamed to 'UpperY_334'.
+[2026-04-08 18:17:01.908] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'UpperJ1'. The duplicate is being renamed to 'UpperJ1_37'.
+[2026-04-08 18:17:01.941] [warning] Body 'middle' has subcomponents with duplicate name 'middle_imu'. The duplicate is being renamed to 'middle_imu_377'.
+[2026-04-08 18:17:01.958] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleO'. The duplicate is being renamed to 'MiddleO_334'.
+[2026-04-08 18:17:01.977] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleX'. The duplicate is being renamed to 'MiddleX_334'.
+[2026-04-08 18:17:01.996] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleY'. The duplicate is being renamed to 'MiddleY_334'.
+[2026-04-08 18:17:02.014] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'MiddleJ1'. The duplicate is being renamed to 'MiddleJ1_37'.
+[2026-04-08 18:17:02.018] [warning] Body 'lower' has subcomponents with duplicate name 'lower_imu'. The duplicate is being renamed to 'lower_imu_377'.
+[2026-04-08 18:17:02.034] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerO'. The duplicate is being renamed to 'LowerO_334'.
+[2026-04-08 18:17:02.052] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerX'. The duplicate is being renamed to 'LowerX_334'.
+[2026-04-08 18:17:02.069] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'LowerY'. The duplicate is being renamed to 'LowerY_334'.
+[2026-04-08 18:17:02.088] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower5'. The duplicate is being renamed to 'Lower5_37'.
+[2026-04-08 18:17:02.106] [warning] MarkerSet 'markerset' has subcomponents with duplicate name 'Lower6'. The duplicate is being renamed to 'Lower6_37'.
+[2026-04-08 18:17:02.145] [warning] Model 'triple_pendulum' has subcomponents with duplicate name 'reporter'. The duplicate is being renamed to 'reporter_376'.

@@ -1,0 +1,2492 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OpenSimDocument Version="40000">
+	<Model name="triple_pendulum">
+		<!--List of components that this component owns and serializes.-->
+		<components>
+			<TableReporter__Vec3_ name="reporter">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+			<TableReporter__Vec3_ name="reporter_0">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+			<TableReporter__Vec3_ name="reporter_1">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+			<TableReporter__Vec3_ name="reporter_2">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+			<TableReporter__Vec3_ name="reporter_3">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+			<TableReporter__Vec3_ name="reporter_4">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+			<TableReporter__Vec3_ name="reporter_5">
+				<!--The recording time interval (s). If interval == 0, defaults toevery valid integration time step.-->
+				<report_time_interval>0.0078125</report_time_interval>
+			</TableReporter__Vec3_>
+		</components>
+		<!--The model's ground reference frame.-->
+		<Ground name="ground">
+			<!--The geometry used to display the axes of this Frame.-->
+			<FrameGeometry name="frame_geometry">
+				<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+				<socket_frame>..</socket_frame>
+				<!--Scale factors in X, Y, Z directions respectively.-->
+				<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+			</FrameGeometry>
+			<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+			<WrapObjectSet name="wrapobjectset">
+				<objects />
+				<groups />
+			</WrapObjectSet>
+		</Ground>
+		<!--Acceleration due to gravity, expressed in ground.-->
+		<gravity>0 -9.8100000000000005 0</gravity>
+		<!--Credits (e.g., model author names) associated with the model.-->
+		<credits>Ajay Seth</credits>
+		<!--Publications and references associated with the model.-->
+		<publications>For testing</publications>
+		<!--Units for all lengths.-->
+		<length_units>meters</length_units>
+		<!--Units for all forces.-->
+		<force_units>N</force_units>
+		<!--List of bodies that make up this model.-->
+		<BodySet name="bodyset">
+			<objects>
+				<Body name="static">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="static_geom_frame_1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="static_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>0.10000000000000001 0.040000000000000001 0.29999999999999999</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>0.91000000000000003</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 1 1</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>box.vtp</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.025000000000000001 0.050000000000000003 -0.13200000000000001</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0 0 -0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="static_imu">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="static_imu_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.50196081399917603 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.02 0.01 0.0050000000000000001</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.034954499453306198 0.08131130039691925 -0.065620496869087219</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.5771152973175049 -0.016443511471152306 -1.5723385810852051</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry />
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects />
+						<groups />
+					</WrapObjectSet>
+					<!--The mass of the body (kg)-->
+					<mass>1.5940000000000001</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0.0063860000000000002 -0.0028679999999999999 0.14999999999999999</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.122 0.013599999999999999 0.0019 0 0 0</inertia>
+				</Body>
+				<Body name="upper">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="upper_geom_frame_1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="upper_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>0.038100000000000002 0.55000000000000004 0.038100000000000002</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>0.91000000000000003</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 1 1</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>box.vtp</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.27500000000000002 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0 0 -0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="upper_imu_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.50196081399917603 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.019999999552965164 0.0099999997764825821 0.004999999888241291</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_0">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_2">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_3">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_4">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_5">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_imu_6">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.031242933124303818 0.26099100708961487 0.00046350000775419176</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-1.4671663045883179 -1.5467665195465088 -3.0352222919464111</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Mesh name="upper_geom_2">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Scale factors in X, Y, Z directions respectively.-->
+							<scale_factors>0 0.038100000000000002 0.038100000000000002</scale_factors>
+							<!--Default appearance attributes for this Geometry-->
+							<Appearance>
+								<!--Flag indicating whether the associated Geometry is visible or hidden.-->
+								<visible>false</visible>
+								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+								<opacity>0.91000000000000003</opacity>
+								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+								<color>0.10000000000000001 0.90000000000000002 0.10000000000000001</color>
+							</Appearance>
+							<!--Name of geometry file.-->
+							<mesh_file>sphere.vtp</mesh_file>
+						</Mesh>
+					</attached_geometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects />
+						<groups />
+					</WrapObjectSet>
+					<!--The mass of the body (kg)-->
+					<mass>1.169</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.27500000596046448 0</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.029651085000000001 0.00038379899999999999 0.029653730999999999 0 0 0</inertia>
+				</Body>
+				<Body name="middle">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="middle_geom_frame_1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Mesh name="middle_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Scale factors in X, Y, Z directions respectively.-->
+									<scale_factors>0.038100000000000002 0.52070000000000005 0.038100000000000002</scale_factors>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>0.91000000000000003</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 1 1</color>
+									</Appearance>
+									<!--Name of geometry file.-->
+									<mesh_file>box.vtp</mesh_file>
+								</Mesh>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.26035000000000003 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0 0 -0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="middle_imu_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.50196081399917603 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.019999999552965164 0.0099999997764825821 0.004999999888241291</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_0">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_2">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_3">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_4">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_5">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_imu_6">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0015089999651536345 0.26339301466941833 0.034758206456899643</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>-0.0040175449103116989 -0.017120247706770897 -1.584223747253418</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Mesh name="middle_geom_2">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Scale factors in X, Y, Z directions respectively.-->
+							<scale_factors>0.038100000000000002 0.038100000000000002 0.038100000000000002</scale_factors>
+							<!--Default appearance attributes for this Geometry-->
+							<Appearance>
+								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+								<opacity>0.91000000000000003</opacity>
+								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+								<color>0.10000000000000001 0.90000000000000002 0.10000000000000001</color>
+							</Appearance>
+							<!--Name of geometry file.-->
+							<mesh_file>sphere.vtp</mesh_file>
+						</Mesh>
+					</attached_geometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects />
+						<groups />
+					</WrapObjectSet>
+					<!--The mass of the body (kg)-->
+					<mass>1.105</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0.26034998893737793 0</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.025078052 0.00036286400000000001 0.025080554000000001 0 0 0</inertia>
+				</Body>
+				<Body name="lower">
+					<!--List of components that this component owns and serializes.-->
+					<components>
+						<PhysicalOffsetFrame name="lower_imu">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+							<attached_geometry>
+								<Brick name="lower_imu_geom_1">
+									<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+									<socket_frame>..</socket_frame>
+									<!--Default appearance attributes for this Geometry-->
+									<Appearance>
+										<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+										<opacity>1</opacity>
+										<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+										<color>1 0.50196081399917603 0</color>
+									</Appearance>
+									<!--Half lengths in X, Y, Z respectively.-->
+									<half_lengths>0.019999999552965164 0.0099999997764825821 0.004999999888241291</half_lengths>
+								</Brick>
+							</attached_geometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_0">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_1">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_2">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_3">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_4">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_5">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_imu_6">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>..</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>-0.0090290000662207603 -0.0183119997382164 0.030600940808653831</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0.00032576080411672592 -0.00036268492112867534 -0.00042528097401373088</orientation>
+						</PhysicalOffsetFrame>
+					</components>
+					<!--The geometry used to display the axes of this Frame.-->
+					<FrameGeometry name="frame_geometry">
+						<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+						<socket_frame>..</socket_frame>
+						<!--Scale factors in X, Y, Z directions respectively.-->
+						<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+					</FrameGeometry>
+					<!--List of geometry attached to this Frame. Note, the geometry are treated as fixed to the frame and they share the transform of the frame when visualized-->
+					<attached_geometry>
+						<Mesh name="lower_geom_1">
+							<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+							<socket_frame>..</socket_frame>
+							<!--Scale factors in X, Y, Z directions respectively.-->
+							<scale_factors>0.26000000000000001 0.11 0.038100000000000002</scale_factors>
+							<!--Default appearance attributes for this Geometry-->
+							<Appearance>
+								<!--The opacity used to display the geometry between 0:transparent, 1:opaque.-->
+								<opacity>0.91000000000000003</opacity>
+								<!--The color, (red, green, blue), [0, 1], used to display the geometry. -->
+								<color>0 0.80000000000000004 1</color>
+							</Appearance>
+							<!--Name of geometry file.-->
+							<mesh_file>box.vtp</mesh_file>
+						</Mesh>
+					</attached_geometry>
+					<!--Set of wrap objects fixed to this body that GeometryPaths can wrap over.This property used to be a member of Body but was moved up with the introduction of Frames.-->
+					<WrapObjectSet name="wrapobjectset">
+						<objects />
+						<groups />
+					</WrapObjectSet>
+					<!--The mass of the body (kg)-->
+					<mass>1.5189999999999999</mass>
+					<!--The location (Vec3) of the mass center in the body frame.-->
+					<mass_center>0 0 0</mass_center>
+					<!--The elements of the inertia tensor (Vec6) as [Ixx Iyy Izz Ixy Ixz Iyz] measured about the mass_center and not the body origin.-->
+					<inertia>0.0018726789999999999 0.0088063919999999997 0.010183573 0 0 0</inertia>
+				</Body>
+			</objects>
+			<groups />
+		</BodySet>
+		<!--List of joints that connect the bodies.-->
+		<JointSet name="jointset">
+			<objects>
+				<FreeJoint name="freejoint">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>ground_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>static_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="_xRotation">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>true</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+							<!--Flag identifies whether or not this coordinate can change freely when posing the model to satisfy kinematic constraints.  When true, the coordinate's initial or specified value is ignored when considering constraints. This allows values for important coordinates, which have this flag set to false, to dictate the value of unimportant coordinates if they are linked via constraints.-->
+							<is_free_to_satisfy_constraints>false</is_free_to_satisfy_constraints>
+						</Coordinate>
+						<Coordinate name="_yRotation">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>true</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+							<!--Flag identifies whether or not this coordinate can change freely when posing the model to satisfy kinematic constraints.  When true, the coordinate's initial or specified value is ignored when considering constraints. This allows values for important coordinates, which have this flag set to false, to dictate the value of unimportant coordinates if they are linked via constraints.-->
+							<is_free_to_satisfy_constraints>false</is_free_to_satisfy_constraints>
+						</Coordinate>
+						<Coordinate name="_zRotation">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>true</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+							<!--Flag identifies whether or not this coordinate can change freely when posing the model to satisfy kinematic constraints.  When true, the coordinate's initial or specified value is ignored when considering constraints. This allows values for important coordinates, which have this flag set to false, to dictate the value of unimportant coordinates if they are linked via constraints.-->
+							<is_free_to_satisfy_constraints>false</is_free_to_satisfy_constraints>
+						</Coordinate>
+						<Coordinate name="_xTranslation">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>-0.059999999999999998</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>true</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+							<!--Flag identifies whether or not this coordinate can change freely when posing the model to satisfy kinematic constraints.  When true, the coordinate's initial or specified value is ignored when considering constraints. This allows values for important coordinates, which have this flag set to false, to dictate the value of unimportant coordinates if they are linked via constraints.-->
+							<is_free_to_satisfy_constraints>false</is_free_to_satisfy_constraints>
+						</Coordinate>
+						<Coordinate name="_yTranslation">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>2.0449999999999999</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>true</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+							<!--Flag identifies whether or not this coordinate can change freely when posing the model to satisfy kinematic constraints.  When true, the coordinate's initial or specified value is ignored when considering constraints. This allows values for important coordinates, which have this flag set to false, to dictate the value of unimportant coordinates if they are linked via constraints.-->
+							<is_free_to_satisfy_constraints>false</is_free_to_satisfy_constraints>
+						</Coordinate>
+						<Coordinate name="_zTranslation">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>2.7280000000000002</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-10 10</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>true</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+							<!--Flag identifies whether or not this coordinate can change freely when posing the model to satisfy kinematic constraints.  When true, the coordinate's initial or specified value is ignored when considering constraints. This allows values for important coordinates, which have this flag set to false, to dictate the value of unimportant coordinates if they are linked via constraints.-->
+							<is_free_to_satisfy_constraints>false</is_free_to_satisfy_constraints>
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="ground_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/ground</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="static_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/static</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</FreeJoint>
+				<PinJoint name="j1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>static_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>upper_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="q1">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-1.5707963300000001 1.5707963300000001</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="static_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/static</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="upper_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/upper</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.52070000000000005 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="j2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>upper_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>middle_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="q2">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-1.5707963300000001 1.5707963300000001</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="upper_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/upper</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="middle_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/middle</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.52070000000000005 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+				<PinJoint name="j3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The parent frame for the joint.).-->
+					<socket_parent_frame>middle_offset</socket_parent_frame>
+					<!--Path to a Component that satisfies the Socket 'child_frame' of type PhysicalFrame (description: The child frame for the joint.).-->
+					<socket_child_frame>lower_offset</socket_child_frame>
+					<!--List containing the generalized coordinates (q's) that parameterize this joint.-->
+					<coordinates>
+						<Coordinate name="q3">
+							<!--The value of this coordinate before any value has been set. Rotational coordinate value is in radians and Translational in meters.-->
+							<default_value>0.086184360000000002</default_value>
+							<!--The speed value of this coordinate before any value has been set. Rotational coordinate value is in rad/s and Translational in m/s.-->
+							<default_speed_value>0</default_speed_value>
+							<!--The minimum and maximum values that the coordinate can range between. Rotational coordinate range in radians and Translational in meters.-->
+							<range>-1.5707963300000001 1.5707963300000001</range>
+							<!--Flag indicating whether or not the values of the coordinates should be limited to the range, above.-->
+							<clamped>false</clamped>
+							<!--Flag indicating whether or not the values of the coordinates should be constrained to the current (e.g. default) value, above.-->
+							<locked>false</locked>
+							<!--If specified, the coordinate can be prescribed by a function of time. It can be any OpenSim Function with valid second order derivatives.-->
+							<prescribed_function />
+							<!--Flag indicating whether or not the values of the coordinates should be prescribed according to the function above. It is ignored if the no prescribed function is specified.-->
+							<prescribed>false</prescribed>
+						</Coordinate>
+					</coordinates>
+					<!--Physical offset frames owned by the Joint that are typically used to satisfy the owning Joint's parent and child frame connections (sockets). PhysicalOffsetFrames are often used to describe the fixed transformation from a Body's origin to another location of interest on the Body (e.g., the joint center). When the joint is deleted, so are the PhysicalOffsetFrame components in this list.-->
+					<frames>
+						<PhysicalOffsetFrame name="middle_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/middle</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+						<PhysicalOffsetFrame name="lower_offset">
+							<!--The geometry used to display the axes of this Frame.-->
+							<FrameGeometry name="frame_geometry">
+								<!--Path to a Component that satisfies the Socket 'frame' of type Frame.-->
+								<socket_frame>..</socket_frame>
+								<!--Scale factors in X, Y, Z directions respectively.-->
+								<scale_factors>0.20000000000000001 0.20000000000000001 0.20000000000000001</scale_factors>
+							</FrameGeometry>
+							<!--Path to a Component that satisfies the Socket 'parent' of type C (description: The parent frame to this frame.).-->
+							<socket_parent>/bodyset/lower</socket_parent>
+							<!--Translational offset (in meters) of this frame's origin from the parent frame's origin, expressed in the parent frame.-->
+							<translation>0 0.070000000000000007 0</translation>
+							<!--Orientation offset (in radians) of this frame in its parent frame, expressed as a frame-fixed x-y-z rotation sequence.-->
+							<orientation>0 0 0</orientation>
+						</PhysicalOffsetFrame>
+					</frames>
+				</PinJoint>
+			</objects>
+			<groups />
+		</JointSet>
+		<!--Controllers that provide the control inputs for Actuators.-->
+		<ControllerSet name="controllerset">
+			<objects>
+				<PrescribedController name="Brain2">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2_0">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1_0</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3_0">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2_0</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4_0">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3_0</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2_1">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1_1</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3_1">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2_1</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4_1">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3_1</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2_2">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1_2</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3_2">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2_2</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4_2">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3_2</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2_3">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1_3</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3_3">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2_3</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4_3">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3_3</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2_4">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1_4</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3_4">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2_4</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4_4">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3_4</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain2_5">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q1_5</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain3_5">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q2_5</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+				<PrescribedController name="Brain4_5">
+					<!--The list of model actuators that this controller will control.The keyword ALL indicates the controller will control all the actuators in the model-->
+					<actuator_list>q3_5</actuator_list>
+					<!--Functions (one per control) describing the controls for actuatorsspecified for this controller.-->
+					<FunctionSet name="ControlFunctions">
+						<objects>
+							<Constant>
+								<value>0</value>
+							</Constant>
+						</objects>
+						<groups />
+					</FunctionSet>
+				</PrescribedController>
+			</objects>
+			<groups />
+		</ControllerSet>
+		<!--Constraints in the model.-->
+		<ConstraintSet name="constraintset">
+			<objects />
+			<groups />
+		</ConstraintSet>
+		<!--Forces in the model (includes Actuators).-->
+		<ForceSet name="forceset">
+			<objects>
+				<CoordinateActuator name="q1">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q1_0">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2_0">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3_0">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q1_1">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2_1">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3_1">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q1_2">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2_2">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3_2">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q1_3">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2_3">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3_3">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q1_4">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2_4">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3_4">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q1_5">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q1</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q2_5">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q2</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+				<CoordinateActuator name="q3_5">
+					<!--Minimum allowed value for control signal. Used primarily when solving for control values.-->
+					<min_control>-Inf</min_control>
+					<!--Maximum allowed value for control signal. Used primarily when solving for control values.-->
+					<max_control>Inf</max_control>
+					<!--Name of the generalized coordinate to which the actuator applies.-->
+					<coordinate>q3</coordinate>
+					<!--The maximum generalized force produced by this actuator.-->
+					<optimal_force>1</optimal_force>
+				</CoordinateActuator>
+			</objects>
+			<groups />
+		</ForceSet>
+		<!--Markers in the model.-->
+		<MarkerSet name="markerset">
+			<objects>
+				<Marker name="LowerJ1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-7.4339199999999995e-05 0.0011313899999999999 0.025654400000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>true</fixed>
+				</Marker>
+				<Marker name="LowerJ2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.000108423 0.0010460199999999999 -0.029354499999999999</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>true</fixed>
+				</Marker>
+				<Marker name="MiddleJ1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.000287748 -0.00026286300000000001 0.0281251</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>true</fixed>
+				</Marker>
+				<Marker name="MiddleJ2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.0013051899999999999 0.00090669899999999996 -0.029250100000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>true</fixed>
+				</Marker>
+				<Marker name="Lower5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.10850700000000001 0.0078234800000000007 0.027082100000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Lower6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714099999999997 0.024291</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="LowerY">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.0126073 0.031563099999999997</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="LowerO">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.03899306825476672 -0.050928438894596133 0.029104294104329301</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="LowerX">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919500000000001 -0.049049700000000002 0.033613299999999999</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Lower4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030406900000000001 -0.028747000000000002</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Middle5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029127699999999999 0.46595500000000001 -0.0069335000000000004</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Middle4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0095136600000000002 0.108455 0.028925300000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="MiddleO">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894097845084057 0.29308873071177155 0.035930523441609442</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="MiddleX">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490554843248496 0.23369714094269275 0.035144388211118552</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="MiddleY">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031090699999999999 0.29227799999999998 0.035547599999999999</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="UpperO">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0311992 0.29078199999999998 -0.029666499999999998</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="UpperX">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796400000000002 0.23119999999999999 -0.028695200000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="UpperY">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031183599999999999 0.29164699999999999 0.030593800000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Upper5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0103902 0.100554 0.029088800000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Upper4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011407499999999999</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Static5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.033016700000000003 0.047716700000000001 0.028199499999999999</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Static6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.0036319500000000001 0.047680599999999997 0.028184500000000001</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="Static4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.032113799999999998 0.037959699999999999 -0.048080499999999998</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="StaticO">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066313200000000003 0.081415500000000002 -0.096979300000000004</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="StaticX">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920699999999999 0.082389000000000004 -0.035803399999999999</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="StaticY">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035961700000000001 0.082712900000000006 -0.097104700000000002</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="UpperJ1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.0047710399999999998 -0.00124278 0.0298993</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="UpperJ2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.0053503999999999999 -0.00186356 -0.028551300000000002</location>
+					<!--Flag (true or false) specifying whether the marker is fixed in its parent frame during the marker placement step of scaling.  If false, the marker is free to move within its parent Frame to match its experimental counterpart.-->
+					<fixed>false</fixed>
+				</Marker>
+				<Marker name="StaticO_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_0">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+				<Marker name="StaticO_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_1">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+				<Marker name="StaticO_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_2">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+				<Marker name="StaticO_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_3">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+				<Marker name="StaticO_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_4">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+				<Marker name="StaticO_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_5">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+				<Marker name="StaticO_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.066312999999999997 0.081415000000000001 -0.096978999999999996</location>
+				</Marker>
+				<Marker name="StaticX_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.065920999999999993 0.082389000000000004 -0.035803000000000001</location>
+				</Marker>
+				<Marker name="StaticY_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/static</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.0035959999999999998 0.082712999999999995 -0.097104999999999997</location>
+				</Marker>
+				<Marker name="UpperO_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031199000000000001 0.29078199999999998 -0.029666999999999999</location>
+				</Marker>
+				<Marker name="UpperX_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.030796 0.23119999999999999 -0.028694999999999998</location>
+				</Marker>
+				<Marker name="UpperY_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031184 0.29164699999999999 0.030594</location>
+				</Marker>
+				<Marker name="UpperJ1_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/upper</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031719999999999998 0.45863199999999998 -0.011408</location>
+				</Marker>
+				<Marker name="MiddleO_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.034894000000000001 0.29308899999999999 0.035930999999999998</location>
+				</Marker>
+				<Marker name="MiddleX_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.031490999999999998 0.23369699999999999 0.035144000000000002</location>
+				</Marker>
+				<Marker name="MiddleY_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.031091000000000001 0.29227799999999998 0.035548000000000003</location>
+				</Marker>
+				<Marker name="MiddleJ1_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/middle</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.029128000000000001 0.46595500000000001 -0.0069340000000000001</location>
+				</Marker>
+				<Marker name="LowerO_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.038993 -0.050928000000000001 0.029104000000000001</location>
+				</Marker>
+				<Marker name="LowerX_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.020919 -0.049050000000000003 0.033612999999999997</location>
+				</Marker>
+				<Marker name="LowerY_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.037643000000000003 0.012607 0.031563000000000001</location>
+				</Marker>
+				<Marker name="Lower5_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>0.113201 0.030407 -0.028747000000000002</location>
+				</Marker>
+				<Marker name="Lower6_6">
+					<!--Path to a Component that satisfies the Socket 'parent_frame' of type PhysicalFrame (description: The frame to which this station is fixed.).-->
+					<socket_parent_frame>/bodyset/lower</socket_parent_frame>
+					<!--The fixed location of the station expressed in its parent frame.-->
+					<location>-0.113886 0.033714000000000001 0.024291</location>
+				</Marker>
+			</objects>
+			<groups />
+		</MarkerSet>
+		<!--Geometry to be used in contact forces.-->
+		<ContactGeometrySet name="contactgeometryset">
+			<objects />
+			<groups />
+		</ContactGeometrySet>
+	</Model>
+</OpenSimDocument>
