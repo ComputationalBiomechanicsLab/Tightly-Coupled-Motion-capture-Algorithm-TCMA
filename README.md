@@ -112,17 +112,6 @@ Additional modalities (e.g., force plates, markerless video) can be added by def
 - **Measurement noise `R`**: Constructed from sensor residual covariances. The algorithm showed low sensitivity to precise values of `R`.
 - **IEKF iterations (`NoI`)**: Number of measurement update iterations per time step (default: 3).
 
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{osman2026tcma,
-  title={A Tightly Coupled Multibody Dynamics and Multi-Sensor Fusion Algorithm for Simultaneous Kinematics and Kinetics Estimation},
-  author={Osman, Hassan and de Kanter, Daan and Boelens, Jelle and Kok, Manon and Seth, Ajay},
-  year={2026}
-}
-```
 
 ## License
 
