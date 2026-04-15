@@ -250,10 +250,20 @@ for t = 1:IEKF.n
     IEKF = IEKF_predict_step_part_2(IEKF, osimModel, state, t);
 
     % --- IEKF Update Step ---
+
     IEKF.H_current1 = 0;
     IEKF.M_current1 = 0;
     IEKF.K_current1 = 0;
-    [IEKF, vSensor] = IEKF_update_step_adapted_H(IEKF, MocaP, vSensor, Xsens, ...
+    max_iter = 3;
+    conv_tol = 1e-6;
+    
+     for ii = 1:max_iter
+         if t>1
+        x_iter_prev = x_iter;
+         else 
+            x_iter_prev = 0; 
+         end
+    [x_iter, IEKF, vSensor] = IEKF_update_step_adapted_H(IEKF, MocaP, vSensor, Xsens, ...
         IMUFrames{1}, IMUFrames{2}, IMUFrames{3}, IMUFrames{4}, IMUFrames{5}, IMUFrames{6}, ...
         MarkerHandles{1,1}, MarkerHandles{1,2}, MarkerHandles{1,3}, MarkerHandles{1,4}, ...
         MarkerHandles{2,1}, MarkerHandles{2,2}, MarkerHandles{2,3}, MarkerHandles{2,4}, ...
@@ -265,7 +275,11 @@ for t = 1:IEKF.n
         torqueGens{1}, torqueGens{2}, torqueGens{3}, ...
         torqueGens{4}, torqueGens{5}, torqueGens{6}, ...
         ground, GravityVec);
-
+       dx = x_iter - x_iter_prev;
+        if norm(dx) / max(norm(x_iter), 1) < conv_tol
+            break;
+        end
+     end
     % --- IEKF Step 3: finalize update ---
     IEKF.x_upds(:, end) = IEKF.x_updsIter(:, end);
 
